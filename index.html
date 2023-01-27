@@ -1,25 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-    <link rel="stylesheet" href="./style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Luis Martinez</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/style.css">
   </head>
-
   <body>
-    <header>
-      <h1>Lernantino</h1>
-      <nav class="top icon">
-        <ul>
-          <li><a href="#">Item1</a></li>
-          <li><a href="#">Item1</a></li> 
-          <li><a href="#">Item1</a></li>
-        </ul>
-      </nav>
-    </header>
+    <!-- Responsive navBar with bootstrap-->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark cm-m-color">
+      <div class="container">
+        <a href="#" class="navbar-brand"> Luis Martinez <span class="small">Portfolio</span></a>
+        <!-- Responsive button icon for media Query for screen size-->
+        <!-- Will convert the text in to a drop down selector-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- The Navbar that contains all the Id's that link to each section in the html-->
+        <!-- Using BootStrap css's to style a button that will collapse this section when the screen size is less than a large screen-->
+        <div class="collapse navbar-collapse" id="navBar">
+          <!-- Class ms-auto justifies this content to the left-->
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="#information" class="nav-link">Information</a></li>
+            <li class="nav-item"><a href="#previousWork" class="nav-link">Previous Work</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+    <!-- Creating the main body of my html that will contain 3 sections with the same id's used for the navbar-->
+    <!-- Creating containers that will include an image and information for each section-->
+    <main class="cm-bg text-light p-5 ">
+      <div class="container pb-5 text-center text-sm-start" id="information">
+        <!-- This class creates a flex rule that will apply when the screen size is considered small-->
+        <div class="d-sm-flex " style="height: 450px">
+          <div>
+            <h1><span class="cm-color">Info</span>rmation</h1>
+            <p>Hello, my name is Luis Martinez i'm an inspiring IT student who wants to going the IT world by helping
+              create website
+              that are interactive for my consumers. MY inspiration for this this is my love towards anything tech related
+              and wanting to be part of a large group to build something great that everyone can use. <br>
+              I'm currently a student in a UT Austin Bootcamp that will help me learn all the necessary skill needed to
+              look for a job and improve with my skills.
+            </p>
+  
+          </div>
+  
+          <img class="img-fluid w-25 d-none d-sm-block p-2" src="./assets/images/wall1.jpeg" alt="Pictures of mountains">
+        </div>
+      </div>
+  
+      <div class="container pb-5 text-center test-sm-start " style="height: 450px" id="previousWork">
+        <div class="d-sm-flex ">
+          <img class="img-fluid w-25 d-none d-sm-block p-2" src="./assets/images/htmlWork01.png"
+            alt="Shows the Html for this website">
+  
+          <div class="w-50 sm-text-center">
+            <h1>Previous <span class="cm-color">Work</span></h1>
+            <ul class="cm-deco">
+              <li><a href="https://github.com/LuisMtz-0/Bootwork" class="cm-text-deco">How to build a website</a></li>
+              <li><a href="https://github.com/LuisMtz-0/prework-study-Guide" class="cm-text-deco">Prework </a></li>
+              <li><a href="https://github.com/BloomNDecay/ParkNomad" class="cm-text-deco">ParkNomad</a></li>
+            </ul>
+          </div>
+  
+          <div class="ms-auto w-50">
+            <h1 class="cm-color-1"> Future Work</h1>
+            <p class="cm-text-color">This are the current work that I can display but this list will continue to grow
+              along with my progress with my classes to the point where I will be able to to create websites faster with bootstrap and tailwind which I had grown more used to using now that i have put into practice with my other projects. </p>
+          </div>
+  
+        </div>
+      </div>
+      <footer class="container text-center bg-dark col-12" id="contact">
+        <div class="row align-items-start">
+          <div class="col">
+            <h1 class="text-info-emphasis text-uppercase" >Socials</h1>
+              <ul class="text-dark-emphasis text-start">
+                <li class=""><a class="text-dark-emphasis" href="">Instagram</a></li>
+                <li><a class="text-dark-emphasis" href="">Twitter</a></li>
+                <li><a class="text-dark-emphasis" href="">Facebook</a></li>
+              </ul>
+          </div>
+          <div class="col">
+            <h1 class="text-dark-emphasis" >Information</h1>
+            <p>This is the beginning of a Portfolio that will keep on improving and adding more link to my previous work added to it </p>
+          </div>
+          <div class="col">
+            <h1>Working Links <span class="text-primary-emphasis">Click Me</span></h1>
+            <ul>
+              <li><a class="text-danger" href="http://youtube.com">Youtube</a></li>
+              <li><a href="https://google.com" class="text-success">Google</a></li>
+              <li><a href="https://twitch.com" class="text-primary">Twitch</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
 
+    </main>
 
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
- </html>
+</html>
